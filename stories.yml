@@ -1,0 +1,15 @@
+- story: Compra de dólar
+  steps:
+  - intent: compra_dolar
+  - action: action_comprar_dolar
+  - slot_was_set:
+    - valor: 100.0
+  - action: action_gerar_chave_pix
+
+- story: Compra de Bitcoin
+  steps:
+  - intent: compra_bitcoin
+  - action: action_comprar_bitcoin
+  - slot_was_set:
+    - valor: 0.5
+  - action: action_gerar_chave_pix
