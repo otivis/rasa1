@@ -1,0 +1,46 @@
+version: "3.1"
+rules:
+- rule: Cumprimentar e Despedir
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Negar Operação
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_deny_operation
+
+- rule: Sobre a Empresa
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_company
+  - action: utter_about_company
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Oferecer Compra de BTC
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buy_btc
+  - action: utter_offer_buy_btc
+
+- rule: Oferecer Compra de USDT
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buy_usdt
+  - action: utter_offer_buy_usdt
+
+- rule: Cancelar Transação
+  condition:
+  - slot_was_set:
+    - transaction_key: true
+  steps:
+  - intent: cancel
+  - action: utter_cancel
