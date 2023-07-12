@@ -1,0 +1,50 @@
+version: "3.1"
+stories:
+- story: Testar Cumprimentar e Despedir
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Testar Negar Operação
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_deny_operation
+
+- story: Testar Sobre a Empresa
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_company
+  - action: utter_about_company
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Testar Cancelar Transação
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buy_btc
+  - action: action_generate_transaction_key
+  - intent: cancel
+  - action: action_perform_crypto_transaction
+  - action: utter_cancel
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Testar Compra de BTC
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buy_btc
+  - action: utter_buy_btc
+
+- story: Testar Compra de USDT
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buy_usdt
+  - action: utter_buy_usdt
