@@ -1,0 +1,61 @@
+version: "3.1"
+intents:
+- greet
+- goodbye
+- deny
+- about_company
+- cancel
+- buy_btc
+- buy_usdt
+
+actions:
+  - action_generate_transaction_key
+  - action_perform_crypto_transaction 
+
+responses:
+  utter_greet:
+  - text: "Olá! Como posso ajudar?"
+
+  utter_goodbye:
+  - text: "Até logo! Se precisar de mais informações, estarei aqui."
+
+  utter_deny_operation:
+  - text: "Entendo. Se mudar de ideia, estou à disposição para ajudar."
+
+  utter_about_company:
+  - text: "Somos a iacrypto, uma empresa sediada em Vitória - ES. Nós operamos com transações P2P automatizadas na área de criptomoedas."
+
+  utter_company_name:
+  - text: "Nosso nome é iacrypto."
+
+  utter_company_location:
+  - text: "Estamos sediados em Vitória - ES."
+
+  utter_core_fallback:
+  - text: "Desculpe, não entendi. Você pode reformular sua pergunta?"
+
+  utter_cancel:
+  - text : "Caso queira fazer o cancelamento da operação aguarde que iremos resolver, caso não se resolva entre em contato conosco com o numero: 27 99803-1090"
+
+  utter_buy_btc:
+  - text: "Você gostaria de comprar BTC (Bitcoin)?"
+    buttons:
+    - title: "Sim"
+      payload: "/buy_btc"
+    - title: "Não"
+      payload: "/deny"
+
+  utter_buy_usdt:
+  - text: "Você gostaria de comprar USDT (Tether)?"
+    buttons:
+    - title: "Sim"
+      payload: "/buy_usdt"
+    - title: "Não"
+      payload: "/deny"
+
+
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+ 
