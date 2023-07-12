@@ -1,0 +1,58 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - Olá
+    - Oi
+    - E aí
+    - Olá, como posso ajudar?
+
+- intent: goodbye
+  examples: |
+    - Tchau
+    - Até logo
+    - Adeus
+
+- intent: deny
+  examples: |
+    - Não
+    - Não, obrigado
+    - Não quero
+
+- intent: about_company
+  examples: |
+    - Quem são vocês?
+    - Sobre a iacrypto
+    - O que é a iacrypto?
+    - iacrypto
+    - IACRYPTO
+    - IA Crypto
+    - IA CRYPTO
+    - Vitória, ES
+    - Vitoria - ES
+    - Espírito Santo
+
+- intent: cancel
+  examples: |
+    - Quero cancelar
+    - vocês me sacanearam
+    - quero devolução
+    - quero estorno
+    - transacionei errado
+    - me ajude a cancelar
+
+- intent: buy_btc
+  examples: |
+    - Quero comprar BTC
+    - Como faço para comprar Bitcoin?
+    - Preciso de Bitcoin
+    - Quero adquirir BTC
+    - Posso comprar Bitcoin aqui?
+
+- intent: buy_usdt
+  examples: |
+    - Quero comprar USDT
+    - Como faço para comprar Tether?
+    - Preciso de USDT
+    - Quero adquirir USDT
+    - Posso comprar Tether aqui?
